@@ -34,3 +34,15 @@ platform around an existing e-commerce application.
 
 ## Implementation Status
 Work will be marked complete after implementation and validation.
+
+## Implementation Checklist
+- [ ] Linux environment and Bash automation
+- [ ] Docker and Docker Compose
+- [ ] Jenkins CI/CD pipeline
+- [ ] Terraform and Ansible
+- [ ] Kubernetes and Helm
+- [ ] Prometheus and Grafana
+- [ ] ELK centralized logging
+- [ ] DevSecOps and Linux hardening
+- [ ] AI-assisted incident analysis
+- [ ] Cloud deployment
