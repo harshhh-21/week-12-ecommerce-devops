@@ -1,0 +1,56 @@
+Linux System Report
+Generated: Mon Oct 26 07:44:58 UTC 2026
+Hostname: Harsh
+
+===== Operating System =====
+Ubuntu 24.04.4 LTS
+
+===== Uptime =====
+ 07:44:58 up 46 min,  1 user,  load average: 0.08, 0.09, 0.09
+
+===== Memory =====
+               total        used        free      shared  buff/cache   available
+Mem:           7.6Gi       1.4Gi       5.4Gi       4.2Mi       1.0Gi       6.2Gi
+Swap:          2.0Gi          0B       2.0Gi
+
+===== Disk =====
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.9G     0  3.9G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none            3.9G  4.0K  3.9G   1% /mnt/wsl
+drivers         952G  284G  669G  30% /usr/lib/wsl/drivers
+/dev/sdd       1007G   28G  928G   3% /
+none            3.9G   44K  3.9G   1% /mnt/wslg
+none            3.9G     0  3.9G   0% /usr/lib/wsl/lib
+rootfs          3.9G  2.8M  3.9G   1% /init
+none            3.9G  928K  3.9G   1% /run
+none            3.9G     0  3.9G   0% /run/lock
+none            3.9G     0  3.9G   0% /run/shm
+none            3.9G   80K  3.9G   1% /mnt/wslg/versions.txt
+none            3.9G   80K  3.9G   1% /mnt/wslg/doc
+C:\             952G  284G  669G  30% /mnt/c
+snapfuse         62M   62M     0 100% /snap/aws-cli/2293
+snapfuse        529M  529M     0 100% /snap/code/261
+snapfuse         62M   62M     0 100% /snap/aws-cli/2312
+snapfuse        519M  519M     0 100% /snap/code/263
+snapfuse         64M   64M     0 100% /snap/core20/2866
+snapfuse         74M   74M     0 100% /snap/core22/2411
+snapfuse         67M   67M     0 100% /snap/core24/1643
+snapfuse         67M   67M     0 100% /snap/core24/2124
+snapfuse         51M   51M     0 100% /snap/snapd/27710
+snapfuse         51M   51M     0 100% /snap/snapd/27738
+snapfuse         38M   38M     0 100% /snap/terraform/943
+snapfuse        4.5M  4.5M     0 100% /snap/tree/54
+tmpfs           781M   20K  781M   1% /run/user/1000
+snapfuse         64M   64M     0 100% /snap/core20/2922
+snapfuse         38M   38M     0 100% /snap/terraform/960
+
+===== CPU and Memory Processes =====
+    PID COMMAND         %CPU %MEM
+    314 grafana          2.5  4.1
+    315 java             1.8  6.7
+    322 prometheus       0.7  1.2
+   1935 bash             0.3  0.0
+   1933 bash             0.3  0.0
+
+===== IP Addresses =====
+172.26.231.131 192.168.49.1 172.19.0.1 172.18.0.1 172.17.0.1 

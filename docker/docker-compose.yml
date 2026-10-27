@@ -1,0 +1,56 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: week12-mongo
+    restart: unless-stopped
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - ecommerce-network
+
+  backend:
+    build:
+      context: ../app/backend
+      dockerfile: Dockerfile
+    container_name: week12-backend
+    restart: on-failure
+    ports:
+      - "3001:3000"
+    environment:
+      NODE_ENV: development
+      PORT: "3000"
+      MONGODB_URI: mongodb://mongo:27017/ecommerce
+      ACCESS_TOKEN_SECRET: ${ACCESS_TOKEN_SECRET}
+      REFRESH_TOKEN_SECRET: ${REFRESH_TOKEN_SECRET}
+      ACCESS_TOKEN_EXPIRY: 15m
+      RAZORPAY_KEY_ID: ${RAZORPAY_KEY_ID}
+      RAZORPAY_KEY_SECRET: ${RAZORPAY_KEY_SECRET}
+      REFRESH_TOKEN_EXPIRY: 7d
+      CORS_ORIGIN: http://localhost:5174,https://e-commerce-website-three-drab.vercel.app
+    depends_on:
+      - mongo
+    networks:
+      - ecommerce-network
+
+  frontend:
+    build:
+      context: ../app/frontend
+      dockerfile: Dockerfile
+    container_name: week12-frontend
+    restart: on-failure
+    ports:
+      - "5174:5174"
+    environment:
+      NODE_ENV: development
+      VITE_API_URL: http://localhost:3001/api/v1
+    depends_on:
+      - backend
+    networks:
+      - ecommerce-network
+
+volumes:
+  mongo_data:
+
+networks:
+  ecommerce-network:
+    driver: bridge
