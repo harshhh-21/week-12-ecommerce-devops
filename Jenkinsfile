@@ -63,10 +63,10 @@ pipeline {
                     trivy image --download-db-only
                     trivy image --no-progress \
                       --severity HIGH,CRITICAL \
-                      --exit-code 1 docker-backend:latest
+                      --exit-code 1 docker_backend:latest
                     trivy image --no-progress \
                       --severity HIGH,CRITICAL \
-                      --exit-code 1 docker-frontend:latest
+                      --exit-code 1 docker_frontend:latest
                 '''
             }
         }
