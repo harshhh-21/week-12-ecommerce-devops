@@ -21,7 +21,7 @@ pipeline {
                 )]) {
                     sh '''
                         set -eu
-                        docker-compose --env-file "$ENV_FILE" \
+                        docker compose --env-file "$ENV_FILE" \
                           -f docker/docker-compose.yml config --quiet
                         echo "Compose configuration is valid."
                     '''
@@ -49,7 +49,7 @@ pipeline {
                 )]) {
                     sh '''
                         set -eu
-                        docker-compose --env-file "$ENV_FILE" \
+                        docker compose --env-file "$ENV_FILE" \
                           -f docker/docker-compose.yml build
                     '''
                 }
@@ -79,7 +79,7 @@ pipeline {
                 )]) {
                     sh '''
                         set -eu
-                        docker-compose --env-file "$ENV_FILE" \
+                        docker compose --env-file "$ENV_FILE" \
                           -f docker/docker-compose.yml up -d
                     '''
                 }
